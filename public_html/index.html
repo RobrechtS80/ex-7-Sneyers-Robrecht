@@ -14,7 +14,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
             $(document).ready(function () {
-                $("#name").click(function () {
+                
                     $.ajax({
                         url: 'https://web-ims.thomasmore.be/datadistribution/API/2.0/drones?format=json',
                         headers:{ 'authorization': 'Basic aW1zOno1MTJtVDRKeVgwUExXZw=='},
@@ -29,7 +29,7 @@ and open the template in the editor.
                         alert('An error has occurred - you may not have been entered');
                     });
                 });
-            });
+           
 
 
             //var responseText = "ik ben een ...."
@@ -38,7 +38,7 @@ and open the template in the editor.
     </head>
     <body>
         <div id="answer"></div>
-        <button id="name" value="" >generate name</button>
+        <!--<button id="name" value="" >generate name</button>-->
         <!--<INPUT TYPE="text" NAME="number1" VALUE="">-->
     </body>
 </html>
