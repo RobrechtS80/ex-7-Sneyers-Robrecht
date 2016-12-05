@@ -47,13 +47,13 @@ and open the template in the editor.
                                     "method": "GET",
                                     "datatype": "json"
                                 }).done(function (filedetails) {
-                                    $('#tabel').append('<tr>' +
+                                    $('#table').append('<tr>' +
                                             '<td>' + droneinfo.name + '</td>' +
                                             '<td>' + droneinfo.mac_address + '</td>' +
                                             '<td>' + droneinfo.location + '</td>' +
                                             '<td>' + files.id + '</td>' +
                                             '<td>' + filedetails.date_first_record + '</td>' +
-                                            '<td>' + filedetails.date_last_record + '</td></tr>');
+                                            '<td>' + filedetails.date_last_record + '</td></tr>');//waarom staat er enkel in het json formaat een Z vanachter bij te tijd ?
                                 }).fail(function () {
                                 });
                             });
@@ -75,7 +75,7 @@ and open the template in the editor.
     </head>
     <body>
         <div id="answer"></div>
-        <table id="tabel">
+        <table id="table" border="1">
             <tr>              
                 <th>Drone</th>
                 <th>Drone_Mac_Adres</th>
