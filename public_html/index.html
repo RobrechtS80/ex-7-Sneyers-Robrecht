@@ -33,6 +33,7 @@ and open the template in the editor.
                             //timeout: 12000,
                             "datatype": "json"
                         }
+                        //voor elke drone de drone opene
                     }).done(function (droneinfo) {
                         $.ajax({
                             "url": "https://web-ims.thomasmore.be/datadistribution/API/2.0/files?drone_id.is=" + droneinfo.id + "&format=json",
@@ -41,6 +42,7 @@ and open the template in the editor.
                             "datatype": "json"
                         }).done(function (files) {
                             files.forEach(function (files) {
+                                setTimeout(200);
                                 $.ajax({
                                     "url": "https://web-ims.thomasmore.be/datadistribution/API/2.0/files/" + files.id + "?format=json",
                                     "headers": {"authorization": "Basic aW1zOno1MTJtVDRKeVgwUExXZw=="},
